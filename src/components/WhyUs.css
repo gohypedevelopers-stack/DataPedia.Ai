@@ -1,0 +1,238 @@
+.why-us-section {
+    background-color: #000;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.why-us-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.why-us-headline {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+}
+
+.why-us-subtext {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 4rem;
+    max-width: 700px;
+}
+
+/* 2x2 Grid - No Cards */
+.why-us-section .features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 110px 140px;
+    width: 100%;
+}
+
+/* Feature Item - Completely Transparent, No Card */
+.why-us-section .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: none !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+/* Icon Container */
+.icon-container {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+/* Stagger animations */
+.feature-card:nth-child(1) .icon-container {
+    animation-delay: 0s;
+}
+
+.feature-card:nth-child(2) .icon-container {
+    animation-delay: 0.3s;
+}
+
+.feature-card:nth-child(3) .icon-container {
+    animation-delay: 0.6s;
+}
+
+.feature-card:nth-child(4) .icon-container {
+    animation-delay: 0.9s;
+}
+
+/* Icons - Larger like reference */
+.icon-container svg {
+    width: 90px;
+    height: 90px;
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.why-us-section .feature-card:hover .icon-container svg {
+    transform: scale(1.1);
+}
+
+/* Feature Image (for illustrations) */
+.feature-image {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.automation-icon {
+    height: auto;
+}
+
+.why-us-section .feature-card:hover .feature-image {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   CSS-based Grid Panel Icon (Feature 1)
+   ============================================ */
+.grid-logo {
+    position: relative;
+    width: 100px;
+    height: 70px;
+}
+
+/* Top grid (parallelogram) */
+.grid-top {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    width: 62px;
+    height: 38px;
+    transform: skewX(-22deg);
+    transform-origin: left center;
+    background:
+        /* vertical lines */
+        repeating-linear-gradient(90deg,
+            rgba(0, 0, 0, 0) 0 7px,
+            #f2b21a 7px 8px),
+        /* horizontal lines */
+        repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0) 0 7px,
+            #f2b21a 7px 8px);
+    border: 2px solid #f2b21a;
+    box-sizing: border-box;
+}
+
+/* Small red square on the grid */
+.grid-top .grid-red {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 7px;
+    height: 7px;
+    background: #e01616;
+    border: 1px solid #f2b21a;
+    box-sizing: border-box;
+}
+
+/* Right side face (trapezoid) */
+.grid-side {
+    position: absolute;
+    left: 72px;
+    top: 14px;
+    width: 26px;
+    height: 40px;
+    clip-path: polygon(0 6%, 100% 0, 100% 100%, 0 92%);
+    background:
+        /* diagonal inner accents */
+        linear-gradient(135deg, rgba(0, 0, 0, 0) 58%, #f2b21a 58% 62%, rgba(0, 0, 0, 0) 62%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0) 73%, #f2b21a 73% 77%, rgba(0, 0, 0, 0) 77%),
+        rgba(0, 0, 0, 0);
+    border: 2px solid #f2b21a;
+    box-sizing: border-box;
+}
+
+/* Floating Animation */
+@keyframes floatIcon {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Title - Match reference */
+.why-us-section .feature-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 1rem;
+    line-height: 1.35;
+}
+
+/* Description - Match reference */
+.why-us-section .feature-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #9ca3af;
+    line-height: 1.8;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .why-us-section .features-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .why-us-headline {
+        font-size: 2rem;
+    }
+
+    .icon-container svg {
+        width: 72px;
+        height: 72px;
+    }
+
+    .feature-image {
+        width: 130px;
+    }
+
+    .grid-logo {
+        width: 90px;
+        height: 62px;
+    }
+
+    .feature-title {
+        font-size: 1.4rem;
+    }
+
+    .feature-description {
+        font-size: 0.95rem;
+        max-width: 380px;
+    }
+}

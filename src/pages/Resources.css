@@ -1,0 +1,291 @@
+.resources-page {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.res-hero {
+    position: relative;
+    padding: 120px 20px 160px;
+    text-align: center;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Geometric Pattern Background using CSS gradients */
+.geometric-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background-image:
+        linear-gradient(30deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
+        linear-gradient(150deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
+        linear-gradient(30deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
+        linear-gradient(150deg, #1a1a1a 12%, transparent 12.5%, transparent 87%, #1a1a1a 87.5%, #1a1a1a),
+        linear-gradient(60deg, #332a10 25%, transparent 25.5%, transparent 75%, #332a10 75%, #332a10),
+        linear-gradient(60deg, #332a10 25%, transparent 25.5%, transparent 75%, #332a10 75%, #332a10);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+    /* This creates a hexagonal/geometric mesh effect in gold/dark tones */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* Refining the geometric look with a simpler border-based pattern if gradient is too complex */
+.geometric-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(222, 185, 104, 0.1) 50px),
+        repeating-linear-gradient(60deg, transparent, transparent 49px, rgba(222, 185, 104, 0.1) 50px),
+        repeating-linear-gradient(-60deg, transparent, transparent 49px, rgba(222, 185, 104, 0.1) 50px);
+    z-index: -1;
+}
+
+
+.res-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.res-hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 40px;
+    color: #e0e0e0;
+}
+
+.text-gold {
+    color: #f3ce7f;
+    /* Lighter gold for text */
+}
+
+.btn-strategy-call {
+    background: #fff;
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-strategy-call:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
+
+/* Grid Section */
+.res-grid-section {
+    padding: 40px 20px 100px;
+}
+
+.res-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.res-card {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;
+    overflow: hidden;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.3s;
+}
+
+.res-card:hover {
+    border-color: #deb968;
+}
+
+/* Card Header */
+.res-card-header {
+    height: 60px;
+    background: #deb968;
+    /* Distinct Gold Header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.header-image-fragment {
+    width: 60px;
+    height: 40px;
+    background: #cba352;
+    /* Slightly darker gold representing image slice */
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.read-it {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    /* or light text on gold */
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.icon-arrow-up-right {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Video Area */
+.res-card-video-area {
+    padding: 10px;
+    background: #111;
+}
+
+.video-thumbnail {
+    height: 180px;
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border-radius: 12px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Simulate the video content visual */
+.video-overlay-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.video-overlay-text h3 {
+    font-size: 0.8rem;
+    color: #fff;
+    margin: 5px 0 0;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.video-overlay-text p {
+    font-size: 0.6rem;
+    color: #ccc;
+    margin: 0;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #ff00cc, #3333ff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.play-button {
+    width: 40px;
+    height: 40px;
+    background: #ff0044;
+    /* Red play button like YouTube */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    z-index: 5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Card Body */
+.res-card-body {
+    padding: 24px;
+    text-align: left;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.res-card-body h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #ccc;
+}
+
+.res-card-body p {
+    font-size: 0.85rem;
+    color: #888;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    flex: 1;
+}
+
+.res-card-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.partners-count {
+    font-size: 1.5rem;
+    /* Big number */
+    font-weight: 800;
+    color: #fff;
+}
+
+.partners-label {
+    font-size: 1rem;
+    color: #888;
+    font-weight: 400;
+}
+
+
+@media (max-width: 900px) {
+    .res-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .res-grid-container {
+        grid-template-columns: 1fr;
+    }
+}

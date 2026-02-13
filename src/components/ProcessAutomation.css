@@ -1,0 +1,395 @@
+.process-automation-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.process-header {
+    background-color: #000;
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.process-headline {
+    font-family: 'Inter', sans-serif;
+    font-size: 3.5rem;
+    /* Large and bold */
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.process-body {
+    width: 100%;
+    /* Remove fixed height, content will dictate */
+    background: linear-gradient(90deg, #fdfbf7 0%, #fbeeb6 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 80px 0;
+    /* Add top/bottom padding */
+    position: relative;
+    overflow: hidden;
+}
+
+.process-steps-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    /* Space between steps */
+    width: 100%;
+    align-items: center;
+}
+
+.process-step-container {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    width: 90%;
+    position: relative;
+    /* Default direction: Visual Left, Text Right */
+}
+
+/* Reverse layout for Step 02, 04... */
+.step-reverse {
+    flex-direction: row-reverse;
+    text-align: right;
+    /* Align text to right for this side */
+}
+
+/* Update border for reverse step */
+.step-reverse .step-content {
+    border-left: none;
+    border-right: 3px solid #5c4033;
+    padding-left: 0;
+    padding-right: 30px;
+    align-items: flex-end;
+    /* Align items to right */
+}
+
+/* Adjust star position for reverse step */
+.step-reverse .revolving-star {
+    left: auto;
+    right: 10px;
+}
+
+.step-reverse .curved-dotted-line {
+    left: auto;
+    right: 10px;
+}
+
+/* Star and Path Wrapper */
+.star-path-wrapper {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.revolving-star {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: rotateStar 5s linear infinite;
+    /* Revolve roundly */
+    z-index: 10;
+}
+
+.curved-dotted-line {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    opacity: 0.6;
+}
+
+@keyframes rotateStar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Step Content */
+.step-content {
+    padding-top: 10px;
+    border-left: 3px solid #5c4033;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    /* Take remaining width */
+}
+
+.step-number-title {
+    font-family: 'Playfair Display', serif, system-ui;
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+
+    /* Animation: Green to Black with Shining only once */
+    color: #000;
+    animation: colorChangeOnce 3s ease-out forwards;
+}
+
+@keyframes colorChangeOnce {
+    0% {
+        color: #22c55e;
+        /* Green */
+        text-shadow: 0 0 20px rgba(34, 197, 94, 0.8), 0 0 40px rgba(34, 197, 94, 0.4);
+    }
+
+    30% {
+        /* Peak shine */
+        text-shadow: 0 0 30px rgba(34, 197, 94, 1), 0 0 60px rgba(255, 255, 255, 0.6);
+    }
+
+    100% {
+        color: #2c1a0f;
+        /* Dark Brown/Black matching the reference text color */
+        text-shadow: none;
+    }
+}
+
+.step-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .process-step-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    /* Reverse logic for mobile: Stack regularly */
+    .step-reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .star-path-wrapper {
+        display: none;
+    }
+
+    .step-content,
+    .step-reverse .step-content {
+        border-left: none;
+        border-right: none;
+        padding: 0;
+        align-items: center;
+    }
+
+    .step-number-title {
+        font-size: 2rem;
+    }
+}
+
+/* GTM Experience Styles */
+.gtm-experience-section {
+    background-color: #000;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Ensure animations don't scroll page */
+}
+
+.gtm-container {
+    max-width: 1100px;
+    width: 100%;
+}
+
+.gtm-headline {
+    font-family: 'Inter', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 60px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    animation: fadeInDown 1s ease-out;
+}
+
+.gtm-experience-section .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    /* Tighter gap */
+}
+
+/* Card Animation Staggering */
+.gtm-experience-section .feature-card {
+    background: #111;
+    /* Darker base */
+    border-radius: 12px;
+    padding: 25px 20px;
+    /* Compact padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bouncy transition */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInUp 0.6s ease-out forwards;
+    min-height: 140px;
+    /* Fixed smaller height */
+}
+
+/* Stagger delays */
+.gtm-experience-section .feature-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.gtm-experience-section .feature-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.gtm-experience-section .feature-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.gtm-experience-section .feature-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.gtm-experience-section .feature-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.gtm-experience-section .feature-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.gtm-experience-section .feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(255, 255, 255, 0.2);
+    z-index: 2;
+}
+
+/* Highlighted cards with gold gradient */
+.gtm-experience-section .feature-highlight {
+    background: linear-gradient(135deg, #d4a574 0%, #c9984a 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(201, 152, 74, 0.2);
+}
+
+.gtm-experience-section .feature-highlight:hover {
+    background: linear-gradient(135deg, #e0b585 0%, #d4a55b 100%);
+    box-shadow: 0 10px 30px rgba(201, 152, 74, 0.4);
+}
+
+/* Shine effect for highlighted cards */
+.gtm-experience-section .feature-highlight::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: rotate(45deg) translateY(-100%);
+    transition: transform 0.6s;
+}
+
+.gtm-experience-section .feature-highlight:hover::after {
+    transform: rotate(45deg) translateY(100%);
+    transition: transform 0.6s;
+}
+
+.gtm-experience-section .feature-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    /* Smaller label */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.gtm-experience-section .feature-highlight .feature-label {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.gtm-experience-section .feature-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    /* Compact title */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.gtm-experience-section .feature-highlight .feature-title {
+    color: #000;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1024px) {
+    .gtm-experience-section .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .gtm-headline {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .gtm-experience-section .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gtm-experience-section .feature-card {
+        padding: 30px 20px;
+    }
+}

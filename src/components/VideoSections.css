@@ -1,0 +1,417 @@
+.vs-wrapper {
+    background: #000;
+    color: #fff;
+}
+
+.vs-section {
+    padding: 80px 0;
+}
+
+.vs-section-tight {
+    padding: 50px 0;
+}
+
+.vs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.vs-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.vs-headline {
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    margin-bottom: 30px;
+}
+
+.vs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.vs-card {
+    border-radius: 18px;
+    background: #121212;
+    border: 1px solid #1e1e1e;
+    overflow: hidden;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+.vs-card-header {
+    padding: 14px 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #8f8f8f;
+    background: #1a1a1a;
+}
+
+.vs-card-body {
+    padding: 26px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.vs-card-gold {
+    background: #d6b25b;
+    color: #151515;
+}
+
+.vs-card-dark {
+    background: #2b2b2b;
+    color: #fff;
+}
+
+.vs-industry-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 48px 24px;
+    text-align: center;
+}
+
+.vs-industry-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+}
+
+.vs-industry-icon {
+    color: #d6b25b;
+}
+
+.vs-icon {
+    width: 34px;
+    height: 34px;
+    stroke-width: 1.5;
+}
+
+.vs-industry-label {
+    font-size: 0.9rem;
+    color: #b7b7b7;
+}
+
+.vs-pill {
+    border: 1px solid #d6b25b;
+    color: #d6b25b;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.vs-marquee {
+    width: 100%;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.vs-marquee-track {
+    display: flex;
+    gap: 80px;
+    width: max-content;
+    animation: vs-marquee 18s linear infinite;
+}
+
+.vs-marquee-second {
+    margin-top: 18px;
+}
+
+.vs-marquee-left {
+    animation-name: vs-marquee-left;
+}
+
+.vs-marquee-right {
+    animation-name: vs-marquee-right;
+}
+
+.vs-marquee-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f0f0f0;
+}
+
+.vs-tool-logo svg {
+    height: 50px;
+    width: auto;
+    max-width: 180px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.vs-tool-logo:hover svg {
+    opacity: 1;
+}
+
+.vs-gradient-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 600;
+    background: linear-gradient(90deg, #ffffff, #d6b25b, #9fd1ff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.vs-video-row {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding-bottom: 10px;
+}
+
+.vs-video-card {
+    min-width: 320px;
+    border-radius: 18px;
+    border: 1px solid #1e1e1e;
+    background: #0f0f0f;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
+
+.vs-video-thumb {
+    aspect-ratio: 16 / 9;
+    background: radial-gradient(circle at top, #2a2a2a, #121212);
+}
+
+.vs-video-meta {
+    padding: 16px;
+}
+
+.vs-video-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.vs-video-channel {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: #9a9a9a;
+}
+
+.vs-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    background: #1f1f1f;
+}
+
+.vs-faq-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.vs-faq-list {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vs-faq-item {
+    border: 2px solid #d6b25b;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.vs-faq-trigger {
+    width: 100%;
+    background: #000;
+    border: none;
+    color: #fff;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.vs-faq-icon {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.vs-faq-panel {
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.vs-faq-content {
+    background: #fff;
+    color: #000;
+    padding: 24px 22px;
+    font-size: 0.95rem;
+}
+
+.vs-footer {
+    border-top: 1px solid #1f1f1f;
+    padding: 60px 0;
+}
+
+.vs-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.vs-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vs-logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.vs-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.vs-social {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.vs-linkedin {
+    background: #0a66c2;
+}
+
+.vs-youtube {
+    background: #ff0000;
+}
+
+.vs-instagram {
+    background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.vs-footer-col {
+    color: #bdbdbd;
+    font-size: 0.9rem;
+}
+
+.vs-footer-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.vs-footer-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #bdbdbd;
+}
+
+.vs-footer-input {
+    border-bottom: 1px solid #bdbdbd;
+    padding-bottom: 6px;
+    margin-top: 8px;
+}
+
+.vs-footer-input input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+.vs-footer-btn {
+    margin-top: 12px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    padding: 8px 18px;
+    background: transparent;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vs-footer-btn:hover {
+    border-color: #d6b25b;
+    color: #d6b25b;
+}
+
+.vs-footer-help {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #6f6f6f;
+}
+
+@keyframes vs-marquee-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes vs-marquee-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .vs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vs-industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vs-video-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vs-footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .vs-video-row {
+        grid-template-columns: 1fr;
+    }
+}

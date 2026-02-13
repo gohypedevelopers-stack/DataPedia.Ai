@@ -1,0 +1,125 @@
+.app-footer {
+    border-top: 1px solid #1f1f1f;
+    padding: 60px 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+.app-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.app-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.app-footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.app-footer-logo {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.app-footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.app-footer-social {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.app-footer-linkedin {
+    background: #0a66c2;
+}
+
+.app-footer-youtube {
+    background: #ff0000;
+}
+
+.app-footer-instagram {
+    background: linear-gradient(135deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.app-footer-col {
+    color: #bdbdbd;
+    font-size: 0.9rem;
+}
+
+.app-footer-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.app-footer-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #bdbdbd;
+}
+
+.app-footer-input {
+    border-bottom: 1px solid #bdbdbd;
+    padding-bottom: 6px;
+    margin-top: 8px;
+}
+
+.app-footer-input input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: #fff;
+    outline: none;
+}
+
+.app-footer-btn {
+    margin-top: 12px;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    padding: 8px 18px;
+    background: transparent;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.app-footer-btn:hover {
+    border-color: #d6b25b;
+    color: #d6b25b;
+}
+
+.app-footer-help {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #6f6f6f;
+}
+
+@media (max-width: 900px) {
+    .app-footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

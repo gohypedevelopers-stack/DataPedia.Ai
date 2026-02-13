@@ -1,0 +1,27 @@
+.antiGravityWrap {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    overflow: hidden;
+
+    /* Dark Premium Background (Black with subtle gold glow) */
+    background:
+        radial-gradient(900px 600px at 25% 20%, rgba(40, 30, 10, 0.4), rgba(0, 0, 0, 0) 55%),
+        radial-gradient(900px 700px at 75% 75%, rgba(60, 45, 10, 0.2), rgba(0, 0, 0, 0) 60%),
+        linear-gradient(135deg, #000000 0%, #080808 40%, #111111 100%);
+}
+
+.antiGravityCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* important so content works */
+    z-index: 0;
+}
+
+.antiGravityContent {
+    position: relative;
+    z-index: 1;
+}

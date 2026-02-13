@@ -1,0 +1,47 @@
+.how-card {
+    animation: howCardFloat 6s ease-in-out infinite;
+}
+
+.how-card:nth-of-type(2) {
+    animation-delay: 0.6s;
+}
+
+.how-card:nth-of-type(3) {
+    animation-delay: 1.2s;
+}
+
+.how-card:nth-of-type(4) {
+    animation-delay: 1.8s;
+}
+
+.how-card:nth-of-type(5) {
+    animation-delay: 2.4s;
+}
+
+.how-card-title {
+    color: #1b1b14;
+    animation: howTitleGlow 5s ease-in-out infinite;
+}
+
+@keyframes howCardFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes howTitleGlow {
+    0%,
+    100% {
+        color: #1b1b14;
+    }
+
+    50% {
+        color: #2f7d32;
+        text-shadow: 0 0 10px rgba(47, 125, 50, 0.35);
+    }
+}

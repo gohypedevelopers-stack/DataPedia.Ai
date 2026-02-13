@@ -1,0 +1,368 @@
+.prospector-agent-page {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    padding-top: 120px;
+    /* Account for navbar */
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.prospector-hero {
+    padding: 80px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.prospector-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.prospector-hero-image {
+    flex: 1;
+}
+
+/* CSS-based graphical placeholder for a prospector tool */
+.image-placeholder-prospector {
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #151515 0%, #050505 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.search-bar {
+    height: 40px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.filter-row {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-tag {
+    height: 24px;
+    width: 80px;
+    background: rgba(222, 185, 104, 0.2);
+    border: 1px solid rgba(222, 185, 104, 0.4);
+    border-radius: 12px;
+}
+
+.results-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.result-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+}
+
+.result-card.highlight {
+    background: rgba(222, 185, 104, 0.1);
+    border: 1px solid rgba(222, 185, 104, 0.3);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333;
+}
+
+.result-card.highlight .avatar {
+    background: #deb968;
+}
+
+.lines {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.line {
+    height: 6px;
+    background: #333;
+    border-radius: 3px;
+}
+
+.line.full {
+    width: 80%;
+}
+
+.line.half {
+    width: 40%;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #555;
+}
+
+.status-check {
+    color: #deb968;
+    font-weight: bold;
+}
+
+/* Scanning scanline animation */
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(222, 185, 104, 0.8);
+    box-shadow: 0 0 10px #deb968;
+    animation: scan 3s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes scan {
+    0% {
+        top: 0%;
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.prospector-hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.prospector-hero-content h1 {
+    font-size: 3rem;
+    color: #deb968;
+    /* Gold color */
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.prospector-hero-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 32px;
+}
+
+.btn-start-trial {
+    background-color: #fff;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+
+.btn-start-trial:hover {
+    transform: scale(1.05);
+}
+
+.btn-start-trial .arrow {
+    font-size: 1.2rem;
+}
+
+/* Features Section */
+.prospector-features {
+    padding: 80px 40px;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prospector-features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 35px;
+    text-align: left;
+}
+
+.feature-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-item:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 40px rgba(222, 185, 104, 0.1);
+    border-color: rgba(222, 185, 104, 0.2);
+}
+
+.feature-item h3 {
+    font-size: 1.45rem;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    color: #b8bec7;
+    line-height: 1.8;
+    letter-spacing: 0.01em;
+    text-align: justify;
+}
+
+/* Stats Section */
+.prospector-stats {
+    padding: 100px 40px;
+    text-align: center;
+    background: #000;
+}
+
+.prospector-stats h2 {
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #deb968;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.stat-desc {
+    font-size: 0.85rem;
+    color: #9ca3af;
+    max-width: 150px;
+}
+
+/* Case Studies Section */
+.prospector-case-studies {
+    padding: 80px 40px;
+    text-align: center;
+    background-color: #050505;
+}
+
+.prospector-case-studies h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* CTA Section */
+.prospector-cta {
+    padding: 120px 40px;
+    text-align: center;
+}
+
+.prospector-cta h2 {
+    font-size: 2.5rem;
+    color: #deb968;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.prospector-cta p {
+    color: #e0e0e0;
+    margin-bottom: 30px;
+}
+
+.btn-get-started {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .prospector-hero-container {
+        flex-direction: column;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* Wrap stats on smaller screens */
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,155 @@
+.services-cards-section {
+    background-color: #000;
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    /* overflow: hidden; REMOVED as it breaks sticky */
+    position: relative;
+}
+
+.services-container {
+    max-width: 1400px;
+    width: 100%;
+    position: relative;
+    /* Context for sticky */
+}
+
+.services-headline {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 80px;
+    letter-spacing: -1px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Group ABC - Sticky */
+.services-group-abc {
+    display: grid;
+    /* Card A takes 50% (2fr), B and C take 25% (1fr) each. 
+       Total 4 fractions. 2/4 = 50% (Matches D/E width of 50%).
+    */
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+
+    position: sticky;
+    top: 50px;
+    z-index: 1;
+
+    /* Ensure this container is tall enough or handled correctly
+       Actually, if it's sticky, it stays put.
+       We need to make sure it doesn't push DE down too far if we want overlap.
+       Wait, if it's sticky, it takes up space in flow.
+       DE comes after it.
+       We want DE to scroll *over* it.
+       Standard flow: DE is below ABC.
+       Scroll down -> ABC moves up -> Hits top -> Sticks.
+       DE continues moving up -> Covers ABC.
+       This works naturally.
+    */
+    padding-bottom: 200px;
+    /* Extra space to ensure smoother transition */
+    min-height: 100vh;
+}
+
+/* Group DE - Relative + Background to Cover */
+.services-group-de {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+
+    position: relative;
+    z-index: 10;
+    background-color: #000;
+
+    /* Add negative margin to pull it up if we want it to start overlapping earlier?
+       Or just standard scroll. Standard scroll is fine. */
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    /* Ensure it has a background to obscure the sticky cards behind it */
+    box-shadow: 0 -50px 100px #000;
+    /* Fade in effect at top */
+}
+
+
+.service-card {
+    background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
+    border: 1px solid #27272a;
+    border-radius: 30px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 550px;
+    position: relative;
+    overflow: hidden;
+    transform-origin: center;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.card-letter {
+    font-size: 5rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 40px;
+    font-family: 'Inter', sans-serif;
+}
+
+.card-content {
+    margin-bottom: auto;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.card-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d4d4d8;
+    margin-bottom: 20px;
+}
+
+.card-icon-box {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #d8ae5e, #a6833d);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    margin-top: 40px;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .services-group-abc {
+        grid-template-columns: 1fr;
+        position: static;
+        /* Disable sticky on mobile usually better UX */
+    }
+
+    .services-group-de {
+        grid-template-columns: 1fr;
+        z-index: 1;
+        background: transparent;
+    }
+}

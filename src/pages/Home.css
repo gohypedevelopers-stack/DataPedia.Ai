@@ -1,0 +1,236 @@
+/* HERO SECTION - ROBUST FINAL */
+.home-hero {
+    background-color: transparent;
+    /* Changed from #050505 to show AntiGravity */
+    min-height: 100vh;
+    padding: 140px 5% 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    perspective: 1200px;
+}
+
+/* Dotted Grid Pattern removed as AntiGravity provides Canvas elements */
+.dotted-grid-bg {
+    display: none;
+}
+
+.home-hero-container {
+    max-width: 1300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    /* Adjusted to give more space for text to prevent wrapping */
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    /* Content above background */
+}
+
+/* LEFT COL (Visual) */
+.hero-visual-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 500px;
+}
+
+.hero-3d-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+/* C2: Crystal SVG Styling */
+.crystal-svg {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 20px 60px rgba(0, 0, 0, 0.8));
+    /* Correct syntax */
+    overflow: visible;
+}
+
+/* A2: Shard SVGs */
+.shard-svg {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    opacity: 0.4;
+    mix-blend-mode: overlay;
+    filter: blur(1px);
+    pointer-events: none;
+    z-index: 1;
+    /* Behind crystal (z=5) or subtly interacting */
+}
+
+/* Ensure shards have visibility */
+.shard-top {
+    top: 15%;
+    right: 35%;
+    /* Position relative to screen or container? context of section */
+    /* Since shards are direct children of section now (based on JSX structure), positioned absolutely */
+}
+
+.home-hero .shard-top {
+    position: absolute;
+    top: 20%;
+    right: 55%;
+    /* Near the crystal area */
+    animation: floatShard 8s infinite ease-in-out;
+}
+
+.home-hero .shard-bottom {
+    position: absolute;
+    bottom: 25%;
+    left: 10%;
+    width: 140px;
+    height: 140px;
+    animation: floatShard 10s infinite ease-in-out reverse;
+    opacity: 0.2;
+}
+
+@keyframes floatShard {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+}
+
+/* Audio Icon Indicator (Visual) */
+.audio-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* RIGHT COL (Content) - A3 */
+.hero-content-col {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.hero-headline {
+    font-size: clamp(2.5rem, 3.8vw, 3.8rem);
+    /* Slightly reduced max for better fit */
+    font-weight: 400;
+    /* Normal weight */
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: #fff;
+    /* Dark Theme: White */
+    letter-spacing: -0.02em;
+    /* Tight */
+    max-width: 100%;
+}
+
+.hero-subtext-container {
+    margin-bottom: 40px;
+}
+
+.hero-subtext {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #d1d5db;
+    /* Tailwind Gray-300 - Readable Light Grey */
+    max-width: 90%;
+    font-weight: 500;
+}
+
+/* CTA Styles (A3: Pill, Gold) */
+.btn-start-trial {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: #ffffff;
+    /* White Default */
+    border: none;
+    border-radius: 100px;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(251, 191, 36, 0.3);
+    letter-spacing: 0.02em;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-start-trial:hover {
+    background: #d8ae5e;
+    /* Gold Hover */
+    transform: scale(1.03);
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.btn-start-trial:hover .arrow {
+    transform: translateY(4px);
+    /* Move Down */
+}
+
+/* C3: Responsiveness */
+@media (max-width: 1024px) {
+    .home-hero {
+        padding-top: 120px;
+        align-items: flex-start;
+        height: auto;
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+
+    .home-hero-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-content-col {
+        padding-left: 0;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-visual-col {
+        height: 400px;
+    }
+
+    .hero-headline {
+        font-size: 3rem;
+    }
+
+    .hero-subtext {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,177 @@
+.services-page {
+    background-color: #000;
+    min-height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.services-hero {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 20px;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #000 70%);
+}
+
+.services-hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.services-hero h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #fff 0%, #d8ae5e 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.services-hero p {
+    font-size: 1.5rem;
+    color: #a1a1aa;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-list-container {
+    padding: 100px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.service-detail-card {
+    display: flex;
+    align-items: center;
+    /* Align items vertically center */
+    padding: 60px;
+    background: #09090b;
+    border: 1px solid #27272a;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.3s ease;
+}
+
+.service-detail-card:hover {
+    border-color: #d8ae5e;
+}
+
+/* Big Gold ID Number */
+.service-id {
+    font-size: 8rem;
+    font-weight: 900;
+    color: rgba(216, 174, 94, 0.1);
+    /* Very faint gold */
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    /* Slight offset */
+    line-height: 1;
+    z-index: 0;
+}
+
+.service-info {
+    flex: 1;
+    z-index: 1;
+    padding-left: 80px;
+    /* Make space for ID if needed, or align */
+}
+
+.service-info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.service-info p {
+    font-size: 1.1rem;
+    color: #d4d4d8;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.service-action {
+    z-index: 1;
+    margin-left: 40px;
+}
+
+.service-btn {
+    padding: 15px 30px;
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.service-btn:hover {
+    background: #d8ae5e;
+    border-color: #d8ae5e;
+    color: #000;
+}
+
+.services-cta {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.cta-box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #d8ae5e, #a6833d);
+    padding: 60px;
+    border-radius: 30px;
+    color: #000;
+}
+
+.cta-box h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    padding: 20px 40px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.cta-btn:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .service-detail-card {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px;
+    }
+
+    .service-info {
+        padding-left: 0;
+        margin-bottom: 30px;
+    }
+
+    .service-action {
+        margin-left: 0;
+    }
+
+    .services-hero h1 {
+        font-size: 3rem;
+    }
+}
