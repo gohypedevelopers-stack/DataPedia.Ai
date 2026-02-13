@@ -66,7 +66,9 @@ const CaseStudies = () => {
                         </motion.p>
 
                         <motion.a
-                            href="#"
+                            href="https://calendar.app.google/UWRRkZgCUAzc2i9i8"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="btn-book"
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}

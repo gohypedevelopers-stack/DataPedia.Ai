@@ -113,7 +113,12 @@ const Services = () => {
                     transition={{ duration: 0.6, ease: "easeOut" }}
                 >
                     <h2>Ready to Scale?</h2>
-                    <button className="cta-btn">Book a Strategy Call</button>
+                    <button
+                        className="cta-btn"
+                        onClick={() => window.open('https://calendar.app.google/UWRRkZgCUAzc2i9i8', '_blank')}
+                    >
+                        Book a Strategy Call
+                    </button>
                 </motion.div>
             </section>
 

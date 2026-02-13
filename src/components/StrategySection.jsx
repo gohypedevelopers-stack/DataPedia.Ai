@@ -16,7 +16,10 @@ const StrategySection = () => {
                     Let Your Systems Work While You Accelerate Growth
                 </p>
                 <div className="strategy-actions">
-                    <button className="btn-strategy-book">
+                    <button
+                        className="btn-strategy-book"
+                        onClick={() => window.open('https://calendar.app.google/UWRRkZgCUAzc2i9i8', '_blank')}
+                    >
                         BOOK A STRATEGY CALL <span className="arrow">→</span>
                     </button>
                     <button className="btn-strategy-learn" onClick={() => navigate('/case-studies')}>

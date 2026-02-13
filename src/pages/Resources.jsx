@@ -62,7 +62,12 @@ const Resources = () => {
                         <span className="text-gold">Automation, Conversion Optimization</span>
                     </h1>
                     <div className="hero-cta-wrapper">
-                        <button className="btn-strategy-call">BOOK A STRATEGY CALL <span className="arrow">→</span></button>
+                        <button
+                            className="btn-strategy-call"
+                            onClick={() => window.open('https://calendar.app.google/UWRRkZgCUAzc2i9i8', '_blank')}
+                        >
+                            BOOK A STRATEGY CALL <span className="arrow">→</span>
+                        </button>
                     </div>
                 </div>
             </section>

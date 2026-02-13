@@ -155,7 +155,10 @@ const AboutUs = () => {
                     <p>
                         Design and execute GTM strategies powered by AI, automation, and proven playbooks. From market entry to scale-up, we help you achieve faster traction and sustainable growth.
                     </p>
-                    <button className="btn-book-strategy">
+                    <button
+                        className="btn-book-strategy"
+                        onClick={() => window.open('https://calendar.app.google/UWRRkZgCUAzc2i9i8', '_blank')}
+                    >
                         BOOK A STRATEGY CALL &rarr;
                     </button>
                 </motion.section>

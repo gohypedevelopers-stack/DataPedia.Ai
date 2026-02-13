@@ -71,7 +71,12 @@ const Navbar = () => {
         </nav>
 
         <div className="navbar-action">
-          <button className="btn-book">BOOK A CALL</button>
+          <button
+            className="btn-book"
+            onClick={() => window.open('https://calendar.app.google/UWRRkZgCUAzc2i9i8', '_blank')}
+          >
+            BOOK A CALL
+          </button>
         </div>
       </div>
     </div>
