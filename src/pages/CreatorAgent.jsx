@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const CreatorAgent = () => {
     const containerRef = useRef();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -117,7 +119,7 @@ const CreatorAgent = () => {
                             ensuring your brand stands out across every platform. By understanding your business goals
                             and audience, it tailors every element to match your brand's tone and style.
                         </p>
-                        <button className="btn-start-trial">START YOUR TRIAL <span className="arrow">→</span></button>
+                        <button className="btn-start-trial" onClick={() => navigate('/auth')}>START YOUR TRIAL <span className="arrow">→</span></button>
                     </div>
                 </div>
             </section>

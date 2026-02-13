@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const WhatsappAgent = () => {
     const containerRef = useRef();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -112,7 +114,7 @@ const WhatsappAgent = () => {
                             Upgrade your interactions with always-on, personalized support that boosts engagement
                             and keeps your business connected at all times.
                         </p>
-                        <button className="btn-start-trial">START YOUR TRIAL <span className="arrow">→</span></button>
+                        <button className="btn-start-trial" onClick={() => navigate('/auth')}>START YOUR TRIAL <span className="arrow">→</span></button>
                     </div>
                 </div>
             </section>

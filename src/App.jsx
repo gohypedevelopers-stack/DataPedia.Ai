@@ -11,6 +11,7 @@ import WhatsappAgent from './pages/WhatsappAgent';
 import CaseStudies from './pages/CaseStudies';
 import Resources from './pages/Resources';
 import Services from './pages/Services';
+import Auth from './pages/Auth';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
       </div>
     </Router>

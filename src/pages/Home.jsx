@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -76,6 +77,7 @@ const ShardSVG = ({ className }) => (
 
 const Home = () => {
     const containerRef = useRef(null);
+    const navigate = useNavigate();
     const heroRef = useRef(null);
     const crystalRef = useRef(null);
 
@@ -202,7 +204,7 @@ const Home = () => {
                             </div>
 
                             <div>
-                                <button className="btn-start-trial">
+                                <button className="btn-start-trial" onClick={() => navigate('/auth')}>
                                     START YOUR TRIAL <span className="arrow">→</span>
                                 </button>
                             </div>

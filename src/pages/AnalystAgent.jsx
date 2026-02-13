@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -9,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const AnalystAgent = () => {
     const containerRef = useRef();
+    const navigate = useNavigate();
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -88,7 +90,7 @@ const AnalystAgent = () => {
                             market behavior. By leveraging real-time data and engagement insights, it
                             helps you stay ahead of competitors and make smart, timely business decisions.
                         </p>
-                        <button className="btn-start-trial">START YOUR TRIAL <span className="arrow">→</span></button>
+                        <button className="btn-start-trial" onClick={() => navigate('/auth')}>START YOUR TRIAL <span className="arrow">→</span></button>
                     </div>
                 </div>
             </section>
