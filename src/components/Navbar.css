@@ -376,6 +376,34 @@
     }
 }
 
+@media (max-width: 480px) {
+    .gh-nav {
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 20px;
+    }
+    .gh-link {
+        font-size: 12px;
+        padding: 4px;
+    }
+    .dropdown-contents {
+        min-width: 250px;
+        padding: 16px 20px;
+        width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .dropdown-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    /* We ensure that dropdowns don't overflow the viewport */
+    .dropdown-row:nth-child(2) {
+        gap: 12px;
+        flex-direction: column;
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0;
